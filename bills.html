@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HaqPay - Bills</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar"><div class="left"><img src="1.jpg" class="profile"><div style="margin-left:8px"><div class="small">Bills</div><div class="name">Pay a Bill</div></div></div></header>
+
+  <div style="padding:18px">
+    <div class="card" style="background:#fff;padding:16px;border-radius:10px">
+      <select id="billType" style="width:100%;padding:12px;border-radius:8px;border:1px solid #eee">
+        <option value="electric">Electricity</option>
+        <option value="tv">TV Subscription</option>
+        <option value="internet">Internet</option>
+      </select>
+
+      <input id="bAccount" placeholder="Account / Meter Number" style="width:100%;padding:12px;margin-top:10px;border-radius:8px;border:1px solid #eee">
+      <input id="bAmount" type="number" placeholder="Amount (₦)" style="width:100%;padding:12px;margin-top:10px;border-radius:8px;border:1px solid #eee">
+
+      <button style="margin-top:10px;width:100%;background:var(--green);color:#fff;padding:12px;border:none;border-radius:8px" onclick="payBill()">Pay Bill</button>
+    </div>
+  </div>
+
+  <script>
+    function payBill(){
+      const t = document.getElementById('billType').value;
+      const acc = document.getElementById('bAccount').value;
+      const amt = document.getElementById('bAmount').value;
+      if(!acc || !amt) { alert('Fill details'); return; }
+      const rec = `Paid ${t} ₦${amt} (Acc: ${acc})`;
+      let h = JSON.parse(localStorage.getItem('haq_history')||'[]');
+      h.unshift(rec);
+      localStorage.setItem('haq_history', JSON.stringify(h));
+      alert('Payment successful (demo).');
+      location.href='history.html';
+    }
+  </script>
+</body>
+</html>

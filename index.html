@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HaqPay - Home</title>
+  <meta name="theme-color" content="#008037"/>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Animated splash (for non-PWA fallback, a link to splash) -->
+  <div id="app">
+    <header class="topbar">
+      <div class="left">
+        <img id="profilePhoto" src="h.jpg" alt="profile" class="profile">
+        <div>
+          <div class="small">Good day,</div>
+          <div class="name">Haq</div>
+        </div>
+      </div>
+      <div class="right">
+        <button class="iconbtn" title="Notifications">🔔</button>
+      </div>
+    </header>
+
+    <div class="search-box">
+      <input type="text" placeholder="Search HaqPay services...">
+    </div>
+
+    <section class="balance-card">
+      <div class="balance-row">
+        <div>
+          <p class="muted">Available Balance</p>
+          <h2>₦50,000.00</h2>
+        </div>
+        <div>
+          <button class="mini" onclick="refreshBalance()">Refresh</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-actions">
+      <a href="transfer.html" class="act"><div class="iconbox">💸</div><p>Transfer</p></a>
+      <a href="airtime.html" class="act"><div class="iconbox">📱</div><p>Airtime</p></a>
+      <a href="data.html" class="act"><div class="iconbox">📶</div><p>Data</p></a>
+      <a href="bills.html" class="act"><div class="iconbox">💡</div><p>Bills</p></a>
+      <a href="loan.html" class="act"><div class="iconbox">💰</div><p>Loan</p></a>
+      <a href="reward.html" class="act"><div class="iconbox">🎟️</div><p>Rewards</p></a>
+      <a href="history.html" class="act"><div class="iconbox">📜</div><p>History</p></a>
+      <a href="login.html" class="act"><div class="iconbox">🔒</div><p>PIN Login</p></a>
+    </section>
+
+    <div class="banner">🎉 Get 2% cashback on bill payments — limited time!</div>
+
+    <div class="slider" aria-hidden="true">
+      <div class="slide">🔥 Recharge ₦1000 — get ₦100 bonus</div>
+      <div class="slide">🚀 Instant transfers — no downtime</div>
+      <div class="slide">💡 Electricity bills now with zero charges</div>
+    </div>
+
+    <!-- Bottom nav -->
+    <nav class="bottom-nav">
+      <a href="index.html" class="bn active">🏠<span>Home</span></a>
+      <a href="Reward.html" class="bn">💼<span>Finance</span></a>
+      <a href="finance.html" class="bn">🎁<span>Rewards</span></a>
+      <a href="me.html" class="bn">👤<span>Me</span></a>
+    </nav>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

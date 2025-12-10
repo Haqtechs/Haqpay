@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HaqPay - Transfer</title>
+</head>
+<body style="margin:0; font-family: Arial, sans-serif; background-color:#f5f5f5;">
+
+    <!-- Header -->
+    <header style="background-color:#1e90ff; color:white; text-align:center; padding:25px 0; box-shadow:0 2px 5px rgba(0,0,0,0.1);">
+        <h1 style="margin:0; font-size:28px;">Transfer Money</h1>
+    </header>
+
+    <!-- Beneficiaries Section -->
+    <section style="padding:20px;">
+        <h2 style="color:#333; margin-bottom:10px;">Beneficiaries</h2>
+        <div style="display:flex; gap:10px; overflow-x:auto; padding-bottom:10px;">
+            <div style="flex:0 0 auto; background-color:white; padding:15px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:center;">
+                <p style="margin:0; font-weight:bold;">fadipe preciou oyindamola</p>
+                <small style="color:gray;">OPAY</small>
+                <button style="margin-top:5px; padding:5px 10px; background-color:#1e90ff; color:white; border:none; border-radius:5px; cursor:pointer;" onclick="fillTransfer('GTBank','1234567890')">Select</button>
+            </div>
+            <div style="flex:0 0 auto; background-color:white; padding:15px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:center;">
+                <p style="margin:0; font-weight:bold;">Fashina khalid</p>
+                <small style="color:gray;">UBA</small>
+                <button style="margin-top:5px; padding:5px 10px; background-color:#1e90ff; color:white; border:none; border-radius:5px; cursor:pointer;" onclick="fillTransfer('UBA','0987654321')">Select</button>
+            </div>
+            <!-- Add more beneficiaries here -->
+        </div>
+    </section>
+
+    <!-- Favourite Button -->
+    <section style="padding:0 20px 20px 20px;">
+        <button id="fav-btn" onclick="toggleFavourite()" style="width:100%; padding:10px; background-color:#ff8c00; color:white; border:none; border-radius:10px; font-size:16px; cursor:pointer;">⭐ Add to Favourites</button>
+    </section>
+
+    <!-- Transfer Form -->
+    <section style="background-color:white; padding:20px; margin:0 20px 20px 20px; border-radius:15px; box-shadow:0 2px 5px rgba(0,0,0,0.1);">
+        <input id="bank" type="text" placeholder="Bank Name" style="width:100%; padding:12px; margin-bottom:15px; border-radius:8px; border:1px solid #ccc; font-size:16px;">
+        <input id="account" type="text" placeholder="Account Number" style="width:100%; padding:12px; margin-bottom:15px; border-radius:8px; border:1px solid #ccc; font-size:16px;">
+        <input id="amount" type="number" placeholder="Amount (₦)" style="width:100%; padding:12px; margin-bottom:20px; border-radius:8px; border:1px solid #ccc; font-size:16px;">
+        <button onclick="makeTransfer()" style="width:100%; padding:12px; background-color:#1e90ff; color:white; border:none; border-radius:10px; font-size:18px; cursor:pointer;">Send Money</button>
+    </section>
+
+    <!-- Back Button -->
+    <a href="index.html" style="display:block; text-align:center; margin-bottom:30px; color:#1e90ff; text-decoration:none; font-weight:bold;">⬅ Back Home</a>
+
+    <script>
+        function makeTransfer() {
+            let bank = document.getElementById('bank').value;
+            let account = document.getElementById('account').value;
+            let amount = document.getElementById('amount').value;
+            if(bank && account && amount) {
+                alert(`Transfer of ₦${amount} to ${account} (${bank}) successful!`);
+            } else {
+                alert('Please fill all fields!');
+            }
+        }
+
+        function fillTransfer(bankName, accountNumber) {
+            document.getElementById('bank').value = bankName;
+            document.getElementById('account').value = accountNumber;
+        }
+
+        function toggleFavourite() {
+            const btn = document.getElementById('fav-btn');
+            if(btn.innerText.includes('Add')) {
+                btn.innerText = '⭐ Added to Favourites';
+                btn.style.backgroundColor = '#32cd32';
+            } else {
+                btn.innerText = '⭐ Add to Favourites';
+                btn.style.backgroundColor = '#ff8c00';
+            }
+        }
+    </script>
+
+</body>
+</html>

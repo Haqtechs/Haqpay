@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HaqPay - PIN Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="centered" style="padding:40px;text-align:center">
+    <h2>Enter your 4-digit PIN</h2>
+    <input id="pinField" maxlength="4" inputmode="numeric" placeholder="●●●●" style="font-size:28px;text-align:center;padding:12px;border-radius:8px;border:1px solid #ddd;width:150px">
+    <div style="margin-top:16px">
+      <button onclick="verifyPin()" style="padding:10px 20px;border-radius:8px;background:var(--green);color:white;border:none">Unlock</button>
+    </div>
+    <p style="margin-top:12px;font-size:13px;color:#666">If it's your first time, set a PIN below</p>
+    <div style="margin-top:10px">
+      <button onclick="setPin()" style="padding:8px 14px;border-radius:8px;border:1px solid var(--green);background:white;color:var(--green)">Set PIN</button>
+    </div>
+  </div>
+
+  <script>
+    function setPin(){
+      const p = prompt('Choose a 4-digit pin (numbers only)');
+      if(!p || p.length!==4 || isNaN(p)){ alert('PIN must be 4 numbers'); return;}
+      localStorage.setItem('haq_pin', p);
+      alert('PIN saved');
+    }
+    function verifyPin(){
+      const p = document.getElementById('pinField').value;
+      const saved = localStorage.getItem('haq_pin');
+      if(!saved){ alert('No PIN set yet — set one first'); return;}
+      if(p === saved) { alert('Welcome back!'); location.href='index.html'; }
+      else alert('Wrong PIN');
+    }
+  </script>
+</body>
+</html>

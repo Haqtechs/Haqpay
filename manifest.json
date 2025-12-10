@@ -7,7 +7,17 @@
   "theme_color": "#008037",
   "description": "HaqPay — simple payments, bills, loans and more",
   "icons": [
-    { "src": "./2.jpg", "sizes": "192x192", "type": "image/jpeg" },
-    { "src": "./1.jpg", "sizes": "512x512", "type": "image/jpeg" }
+    { 
+      "src": "https://via.placeholder.com/192x192/008037/ffffff?text=HP", 
+      "sizes": "192x192", 
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    { 
+      "src": "https://via.placeholder.com/512x512/008037/ffffff?text=HP", 
+      "sizes": "512x512", 
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
   ]
 }

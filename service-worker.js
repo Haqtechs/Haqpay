@@ -1,19 +1,21 @@
 const CACHE_NAME = 'haqpay-v1';
 const ASSETS = [
-  '/',
-  '/index.html',
-  '/style.css',
-  '/app.js',
-  '/transfer.html',
-  '/airtime.html',
-  '/history.html',
-  '/loan.html',
-  '/bills.html',
-  '/login.html',
-  '/splash.html',
-  '/manifest.json',
-  '/me.html',
-  '/data.html'
+  './',
+  './index.html',
+  './style.css',
+  './app.js',
+  './transfer.html',
+  './airtime.html',
+  './history.html',
+  './loan.html',
+  './bills.html',
+  './login.html',
+  './splash.html',
+  './manifest.json',
+  './me.html',
+  './data.html',
+  './reward.html',
+  './finance.html'
 ];
 
 self.addEventListener('install', evt => {
@@ -29,6 +31,6 @@ self.addEventListener('activate', evt => {
 
 self.addEventListener('fetch', evt => {
   evt.respondWith(
-    caches.match(evt.request).then(res => res || fetch(evt.request).catch(()=>caches.match('/index.html')))
+    caches.match(evt.request).then(res => res || fetch(evt.request).catch(()=>caches.match('./index.html')))
   );
 });

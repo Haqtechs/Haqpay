@@ -4,38 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Finance</title>
-</head>
-<body style="font-family: Arial, sans-serif; margin:0; padding:0; background-color:#f5f5f5;">
+    <a href="add.html" style="text-decoration:none;">
+    <button style="...your button style...">Add Money</button>
+</a>
 
-    <header style="background-color:#1e90ff; color:white; padding:20px; text-align:center;">
-        <h1>Finance</h1>
+<a href="saving.html" style="text-decoration:none;">
+    <button style="...your button style...">Savings</button>
+</a>
+</head>
+
+<body style="font-family: Arial, sans-serif; margin:0; padding:0; background-color:#f3f7f9;">
+
+    <!-- HEADER -->
+    <header style="background-color:#00b894; color:white; padding:20px; text-align:center; box-shadow:0 2px 5px rgba(0,0,0,0.15);">
+        <h1 style="margin:0; font-size:22px;">Finance</h1>
     </header>
 
-    <main style="padding:20px;">
-        <section style="background-color:white; padding:20px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1); margin-bottom:20px;">
-            <h2 style="color:#333;">Account Balance</h2>
-            <p style="font-size:24px; font-weight:bold; color:#1e90ff;">₦50000</p>
+    <main style="padding:20px; padding-bottom:100px;">
+
+        <!-- BALANCE CARD -->
+        <section style="
+            background:white; 
+            padding:20px; 
+            border-radius:15px; 
+            box-shadow:0 3px 6px rgba(0,0,0,0.1);
+            margin-bottom:20px;">
+            <h2 style="color:#555; font-size:16px; margin:0;">Total Balance</h2>
+            <p style="font-size:32px; margin-top:10px; margin-bottom:0; font-weight:bold; color:#00b894;">
+                ₦50,000.00
+            </p>
         </section>
 
-        <section style="background-color:white; padding:20px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1); margin-bottom:20px;">
-            <h2 style="color:#333;">Recent Transactions</h2>
-            <ul style="list-style:none; padding:0;">
-                <li style="padding:10px 0; border-bottom:1px solid #ddd;"></li>Spend and save- ₦200</li>
-                <li style="padding:10px 0; border-bottom:1px solid #ddd;">Cashback- ₦12</li>
-                <li style="padding:10px 0;">Coupons balance- ₦30.4</li>
+        <!-- MINI FINANCIAL TOOLS -->
+        <section style="display:flex; gap:10px; margin-bottom:20px;">
+            <div style="flex:1; background:white; padding:15px; text-align:center; border-radius:12px;
+                box-shadow:0 2px 5px rgba(0,0,0,0.08); font-size:14px;">
+                🔒 Save
+            </div>
+
+            <div style="flex:1; background:white; padding:15px; text-align:center; border-radius:12px;
+                box-shadow:0 2px 5px rgba(0,0,0,0.08); font-size:14px;">
+                💸 Spend & Save
+            </div>
+
+            <div style="flex:1; background:white; padding:15px; text-align:center; border-radius:12px;
+                box-shadow:0 2px 5px rgba(0,0,0,0.08); font-size:14px;">
+                📈 Invest
+            </div>
+        </section>
+
+        <!-- TRANSACTIONS -->
+        <section style="
+            background-color:white; 
+            padding:20px; 
+            border-radius:15px; 
+            box-shadow:0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom:20px;">
+
+            <h2 style="color:#333; font-size:17px; margin-bottom:15px;">Recent Transactions</h2>
+
+            <ul style="list-style:none; padding:0; margin:0;">
+                <li style="padding:12px 0; border-bottom:1px solid #eee; font-size:15px;">
+                    Spend & Save <span style="float:right; font-weight:bold;">- ₦200</span>
+                </li>
+
+                <li style="padding:12px 0; border-bottom:1px solid #eee; font-size:15px;">
+                    Cashback <span style="float:right; font-weight:bold; color:#00b894;">+ ₦12</span>
+                </li>
+
+                <li style="padding:12px 0; font-size:15px;">
+                    Coupons Balance <span style="float:right; font-weight:bold;">₦30.40</span>
+                </li>
             </ul>
+
         </section>
 
-        <section style="text-align:center; margin-top:20px;">
-            <button style="padding:10px 20px; background-color:#1e90ff; color:white; border:none; border-radius:5px; cursor:pointer;">Add Money</button>
-        </section>
+        <!-- ACTION BUTTON -->
+        <div style="text-align:center; margin-top:10px;">
+            <button style="
+                padding:12px 25px; 
+                background-color:#00b894; 
+                color:white; 
+                border:none; 
+                border-radius:30px; 
+                font-size:16px; 
+                cursor:pointer;
+                box-shadow:0 3px 6px rgba(0,0,0,0.15);">
+                Add Money
+            </button>
+        </div>
+
     </main>
 
-    <nav style="position:fixed; bottom:0; width:100%; background-color:white; display:flex; justify-content:space-around; padding:10px 0; box-shadow:0 -2px 5px rgba(0,0,0,0.1);">
-        <a href="index.html" style="text-decoration:none; color:#1e90ff;">Home</a>
-        <a href="finance.html" style="text-decoration:none; color:#1e90ff;">Finance</a>
-        <a href="reward.html" style="text-decoration:none; color:#1e90ff;">Rewards</a>
-        <a href="me.html" style="text-decoration:none; color:#1e90ff;">Me</a>
+    <!-- BOTTOM NAV -->
+    <nav style="
+        position:fixed; 
+        bottom:0; 
+        width:100%; 
+        background-color:white; 
+        display:flex; 
+        justify-content:space-around; 
+        padding:12px 0; 
+        box-shadow:0 -2px 5px rgba(0,0,0,0.1);">
+
+        <a href="index.html" style="text-decoration:none; color:#555; font-size:14px;">🏠 Home</a>
+        <a href="reward.html" style="text-decoration:none; color:#555; font-size:14px;">🎁 Rewards</a>
+        <a href="finance.html" style="text-decoration:none; color:#00b894; font-weight:bold; font-size:14px;">💼 Finance</a>
+        <a href="me.html" style="text-decoration:none; color:#555; font-size:14px;">👤 Me</a>
+
     </nav>
 
 </body>

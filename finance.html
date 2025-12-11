@@ -2,117 +2,281 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Finance</title>
-    <a href="add.html" style="text-decoration:none;">
-    <button style="...your button style...">Add Money</button>
-</a>
-
-<a href="saving.html" style="text-decoration:none;">
-    <button style="...your button style...">Savings</button>
-</a>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance - HAQPAY</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="font-family: Arial, sans-serif; margin:0; padding:0; background-color:#f3f7f9;">
+<body>
 
     <!-- HEADER -->
-    <header style="background-color:#00b894; color:white; padding:20px; text-align:center; box-shadow:0 2px 5px rgba(0,0,0,0.15);">
-        <h1 style="margin:0; font-size:22px;">Finance</h1>
+    <header class="header">
+        <h2>Finance</h2>
     </header>
 
-    <main style="padding:20px; padding-bottom:100px;">
-
-        <!-- BALANCE CARD -->
-        <section style="
-            background:white; 
-            padding:20px; 
-            border-radius:15px; 
-            box-shadow:0 3px 6px rgba(0,0,0,0.1);
-            margin-bottom:20px;">
-            <h2 style="color:#555; font-size:16px; margin:0;">Total Balance</h2>
-            <p style="font-size:32px; margin-top:10px; margin-bottom:0; font-weight:bold; color:#00b894;">
-                ₦50,000.00
-            </p>
-        </section>
-
-        <!-- MINI FINANCIAL TOOLS -->
-        <section style="display:flex; gap:10px; margin-bottom:20px;">
-            <div style="flex:1; background:white; padding:15px; text-align:center; border-radius:12px;
-                box-shadow:0 2px 5px rgba(0,0,0,0.08); font-size:14px;">
-                🔒 Save
-            </div>
-
-            <div style="flex:1; background:white; padding:15px; text-align:center; border-radius:12px;
-                box-shadow:0 2px 5px rgba(0,0,0,0.08); font-size:14px;">
-                💸 Spend & Save
-            </div>
-
-            <div style="flex:1; background:white; padding:15px; text-align:center; border-radius:12px;
-                box-shadow:0 2px 5px rgba(0,0,0,0.08); font-size:14px;">
-                📈 Invest
-            </div>
-        </section>
-
-        <!-- TRANSACTIONS -->
-        <section style="
-            background-color:white; 
-            padding:20px; 
-            border-radius:15px; 
-            box-shadow:0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom:20px;">
-
-            <h2 style="color:#333; font-size:17px; margin-bottom:15px;">Recent Transactions</h2>
-
-            <ul style="list-style:none; padding:0; margin:0;">
-                <li style="padding:12px 0; border-bottom:1px solid #eee; font-size:15px;">
-                    Spend & Save <span style="float:right; font-weight:bold;">- ₦200</span>
-                </li>
-
-                <li style="padding:12px 0; border-bottom:1px solid #eee; font-size:15px;">
-                    Cashback <span style="float:right; font-weight:bold; color:#00b894;">+ ₦12</span>
-                </li>
-
-                <li style="padding:12px 0; font-size:15px;">
-                    Coupons Balance <span style="float:right; font-weight:bold;">₦30.40</span>
-                </li>
-            </ul>
-
-        </section>
-
-        <!-- ACTION BUTTON -->
-        <div style="text-align:center; margin-top:10px;">
-            <button style="
-                padding:12px 25px; 
-                background-color:#00b894; 
-                color:white; 
-                border:none; 
-                border-radius:30px; 
-                font-size:16px; 
-                cursor:pointer;
-                box-shadow:0 3px 6px rgba(0,0,0,0.15);">
-                Add Money
-            </button>
+    <!-- BALANCE CARD -->
+    <section class="balance-card">
+        <p class="small-title">Available Balance</p>
+        <h1 class="amount">₦0.00</h1>
+        <div class="finance-buttons">
+            <a href="add.html" class="btn-fin">Add Money</a>
+            <a href="saving.html" class="btn-fin sec">Savings</a>
         </div>
+    </section>
 
-    </main>
+    <!-- QUICK ACTIONS -->
+ <!-- QUICK ACTIONS -->
+<section class="quick-actions" style="margin-top:25px;">
+    <h3 style="color:#333; margin-bottom:15px;">Quick Actions</h3>
+
+    <div class="actions-grid" 
+         style="display:grid; grid-template-columns:repeat(4,1fr); gap:12px;">
+
+        <!-- Add Money -->
+        <a href="add.html" class="action-box" 
+           style="background:white; padding:15px 5px; border-radius:12px; 
+           text-align:center; box-shadow:0 2px 5px rgba(0,0,0,0.1); 
+           text-decoration:none; color:#111;">
+            <div class="icon-badge" 
+                 style="font-size:28px; margin-bottom:8px;">💰</div>
+            <span style="font-size:13px; font-weight:600;">Add</span>
+        </a>
+
+        <!-- Send Money -->
+        <a href="transfer.html" class="action-box"
+           style="background:white; padding:15px 5px; border-radius:12px; 
+           text-align:center; box-shadow:0 2px 5px rgba(0,0,0,0.1); 
+           text-decoration:none; color:#111;">
+            <div style="font-size:28px; margin-bottom:8px;">🔁</div>
+            <span style="font-size:13px; font-weight:600;">Send</span>
+        </a>
+
+        <!-- Pay Bills -->
+        <a href="bill.html" class="action-box"
+           style="background:white; padding:15px 5px; border-radius:12px; 
+           text-align:center; box-shadow:0 2px 5px rgba(0,0,0,0.1); 
+           text-decoration:none; color:#111;">
+            <div style="font-size:28px; margin-bottom:8px;">💡</div>
+            <span style="font-size:13px; font-weight:600;">Bills</span>
+        </a>
+
+        <!-- Savings -->
+        <a href="saving.html" class="action-box"
+           style="background:white; padding:15px 5px; border-radius:12px; 
+           text-align:center; box-shadow:0 2px 5px rgba(0,0,0,0.1); 
+           text-decoration:none; color:#111;">
+            <div style="font-size:28px; margin-bottom:8px;">🪙</div>
+            <span style="font-size:13px; font-weight:600;">Save</span>
+        </a>
+    </div>
+</section>
+
+    <!-- FINANCIAL HISTORY SHORTCUT -->
+    <section class="history-link">
+        <a href="history.html" class="history-btn">View Full Transaction History →</a>
+    </section>
 
     <!-- BOTTOM NAV -->
-    <nav style="
-        position:fixed; 
-        bottom:0; 
-        width:100%; 
-        background-color:white; 
-        display:flex; 
-        justify-content:space-around; 
-        padding:12px 0; 
-        box-shadow:0 -2px 5px rgba(0,0,0,0.1);">
+<nav class="bottom-nav">
+    <a href="index.html">🏠<span>Home</span></a>
+    <a href="finance.html" class="active">💳<span>Finance</span></a>
+    <a href="reward.html">🎁<span>Rewards</span></a>
+    <a href="me.html">👤<span>Me</span></a>
+</nav>
+    
+    <style>
+        /* style.css — HaqPay Finance styles (mobile-first) */
 
-        <a href="index.html" style="text-decoration:none; color:#555; font-size:14px;">🏠 Home</a>
-        <a href="reward.html" style="text-decoration:none; color:#555; font-size:14px;">🎁 Rewards</a>
-        <a href="finance.html" style="text-decoration:none; color:#00b894; font-weight:bold; font-size:14px;">💼 Finance</a>
-        <a href="me.html" style="text-decoration:none; color:#555; font-size:14px;">👤 Me</a>
+/* Reset / base */
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html,body{ height:100%; margin:0; padding:0; font-family: Arial, Helvetica, sans-serif; background:#f3f7f9; color:#333; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
 
-    </nav>
+/* Header */
+.header{
+  background: #00b894; /* primary */
+  color: #fff;
+  padding: 18px 16px;
+  text-align: left;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+.header h2{
+  margin:0;
+  font-size:18px;
+  font-weight:700;
+  letter-spacing:0.2px;
+}
+
+/* Balance card */
+.balance-card{
+  margin: 18px;
+  background:#ffffff;
+  padding:18px;
+  border-radius:14px;
+  box-shadow: 0 6px 18px rgba(3, 50, 25, 0.04);
+  text-align:left;
+}
+.small-title{
+  margin:0;
+  color:#556;
+  font-size:13px;
+}
+.amount{
+  margin:8px 0 14px 0;
+  font-size:28px;
+  color:#00b894;
+  font-weight:800;
+  letter-spacing:0.4px;
+}
+.finance-buttons{
+  display:flex;
+  gap:10px;
+}
+.btn-fin{
+  display:inline-block;
+  text-decoration:none;
+  text-align:center;
+  flex:1;
+  padding:11px 12px;
+  border-radius:999px;
+  background:#00b894;
+  color:#fff;
+  font-weight:700;
+  box-shadow: 0 6px 14px rgba(0,184,148,0.12);
+}
+.btn-fin.sec{
+  background:#fff;
+  color:#00b894;
+  border:1px solid rgba(0,184,148,0.14);
+  box-shadow:none;
+  font-weight:700;
+}
+
+/* Quick actions */
+.quick-actions{
+  margin: 12px 18px;
+}
+.quick-actions h3{
+  margin:0 0 10px 0;
+  font-size:15px;
+  color:#333;
+}
+.actions-grid{
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  gap:10px;
+}
+.action-box{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  background:#fff;
+  padding:12px;
+  border-radius:12px;
+  text-decoration:none;
+  color:#333;
+  font-size:12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+  min-height:78px;
+  transition: transform .14s ease, box-shadow .14s ease;
+}
+.action-box:active,
+.action-box:focus,
+.action-box:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.09);
+}
+.action-box .icon{
+  width:28px;
+  height:28px;
+  margin-bottom:8px;
+  opacity:0.95;
+}
+
+/* History shortcut */
+.history-link{
+  margin:18px;
+  text-align:center;
+}
+.history-btn{
+  display:inline-block;
+  text-decoration:none;
+  padding:12px 18px;
+  background:#fff;
+  color:#00b894;
+  border-radius:12px;
+  font-weight:700;
+  box-shadow: 0 4px 12px rgba(0,184,148,0.06);
+}
+
+/* Bottom navigation */
+.bottom-nav{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  height:74px;
+  background:#ffffff;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  box-shadow: 0 -6px 20px rgba(4,20,14,0.06);
+  padding:8px 10px;
+  z-index:999;
+  border-top-left-radius:12px;
+  border-top-right-radius:12px;
+}
+.bottom-nav a{
+  text-decoration:none;
+  color:#555;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:6px;
+  font-size:11px;
+  opacity:0.95;
+}
+.bottom-nav a img{
+  width:22px;
+  height:22px;
+  display:block;
+}
+.bottom-nav a.active{
+  color:#00b894;
+  font-weight:700;
+}
+.bottom-nav a.active img{
+  filter: none;
+  transform: translateY(-2px);
+}
+
+/* Responsive tweaks */
+@media (max-width:520px){
+  .actions-grid{
+    grid-template-columns: repeat(4, 1fr);
+    gap:8px;
+  }
+  .amount{ font-size:26px; }
+  .header h2{ font-size:16px; }
+  .balance-card{ margin:14px; padding:16px; }
+  .quick-actions{ margin:12px 14px; }
+  .history-link{ margin:14px; }
+}
+
+/* Larger screens */
+@media (min-width:800px){
+  .balance-card{ max-width:880px; margin:24px auto; }
+  .quick-actions{ max-width:880px; margin:12px auto; }
+  .history-link{ max-width:880px; margin:20px auto; }
+  .bottom-nav{ max-width:880px; margin: 0 auto; left:0; right:0; border-radius:0;}
+}
+
+/* Small utility */
+.hidden{ display:none !important; }
+    </style>
 
 </body>
 </html>

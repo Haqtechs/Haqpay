@@ -5,17 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>HaqPay - History</title>
 </head>
-<body style="margin:0; font-family: Arial, sans-serif; background-color:#f5f5f5;">
 
-    <!-- Header -->
-    <header style="background-color:#1e90ff; color:white; text-align:center; padding:25px 0; box-shadow:0 2px 5px rgba(0,0,0,0.1);">
-        <h1 style="margin:0; font-size:28px;">Transaction History</h1>
+<body style="margin:0; font-family:Arial, sans-serif; background:#f4f6fa;">
+
+    <!-- HEADER -->
+    <header style="background:#1e90ff; color:white; text-align:center; padding:25px 0; 
+                   box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+        <h1 style="margin:0; font-size:26px;">Transaction History 📜</h1>
     </header>
 
-    <!-- Filter Section -->
+    <!-- FILTER -->
     <section style="padding:20px;">
-        <label for="filter" style="display:block; margin-bottom:8px; color:#333; font-weight:bold;">Filter by Type</label>
-        <select id="filter" onchange="filterHistory()" style="width:100%; padding:12px; border-radius:8px; border:1px solid #ccc; font-size:16px;">
+        <label style="display:block; margin-bottom:8px; color:#222; font-weight:bold;">Filter by Type</label>
+
+        <select id="filter" onchange="filterHistory()" 
+                style="width:100%; padding:12px; border-radius:10px; border:1px solid #ccc; 
+                       background:white; font-size:16px; outline:none;">
             <option value="all">All Transactions</option>
             <option value="transfer">Money Transfer</option>
             <option value="airtime">Airtime Purchase</option>
@@ -23,77 +28,106 @@
         </select>
     </section>
 
-    <!-- Transaction List -->
+    <!-- LIST -->
     <main style="padding:0 20px 80px 20px;">
-        <div id="historyList" style="display:flex; flex-direction:column; gap:15px;">
 
-            <!-- Sample Transaction Card -->
-            <div class="transaction" data-type="transfer" style="background-color:white; padding:20px; border-radius:15px; box-shadow:0 2px 5px rgba(0,0,0,0.1);">
-                <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
-                    <span style="font-weight:bold; color:#333;">Transfer to Fashina khalid</span>
-                    <span style="color:green; font-weight:bold;">₦5,000</span>
+        <div id="historyList" style="display:flex; flex-direction:column; gap:18px;">
+
+            <!-- TRANSFER -->
+            <div class="transaction" data-type="transfer"
+                style="background:white; padding:18px; border-radius:15px; 
+                       box-shadow:0 3px 8px rgba(0,0,0,0.12);">
+                
+                <div style="display:flex; justify-content:space-between;">
+                    <span style="font-weight:bold;">🔁 Transfer to Fashina Khalid</span>
+                    <span style="font-weight:bold; color:#108b35;">₦5,000</span>
                 </div>
-                <div style="display:flex; justify-content:space-between; color:gray; font-size:14px;">
+
+                <div style="color:gray; font-size:14px; margin-top:6px; display:flex; justify-content:space-between;">
                     <span>GTBank</span>
-                    <span>2025-12-10 14:30</span>
+                    <span>2025-12-10 • 14:30</span>
                 </div>
-                <button onclick="reuseTransaction(this)" style="margin-top:10px; padding:8px 12px; background-color:#1e90ff; color:white; border:none; border-radius:8px; cursor:pointer;">Reuse</button>
+
+                <button onclick="reuseTransaction(this)"
+                    style="margin-top:12px; padding:9px 14px; background:#1e90ff; color:white; 
+                           border:none; border-radius:8px; cursor:pointer; font-size:14px;">
+                    🔁 Reuse
+                </button>
             </div>
 
-            <div class="transaction" data-type="airtime" style="background-color:white; padding:20px; border-radius:15px; box-shadow:0 2px 5px rgba(0,0,0,0.1);">
-                <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
-                    <span style="font-weight:bold; color:#333;">MTN Airtime</span>
-                    <span style="color:green; font-weight:bold;">₦500</span>
+            <!-- AIRTIME -->
+            <div class="transaction" data-type="airtime"
+                style="background:white; padding:18px; border-radius:15px; 
+                       box-shadow:0 3px 8px rgba(0,0,0,0.12);">
+                
+                <div style="display:flex; justify-content:space-between;">
+                    <span style="font-weight:bold;">📱 MTN Airtime</span>
+                    <span style="font-weight:bold; color:#108b35;">₦500</span>
                 </div>
-                <div style="display:flex; justify-content:space-between; color:gray; font-size:14px;">
+
+                <div style="color:gray; font-size:14px; margin-top:6px; display:flex; justify-content:space-between;">
                     <span>08012345678</span>
-                    <span>2025-12-09 19:15</span>
+                    <span>2025-12-09 • 19:15</span>
                 </div>
-                <button onclick="reuseTransaction(this)" style="margin-top:10px; padding:8px 12px; background-color:#1e90ff; color:white; border:none; border-radius:8px; cursor:pointer;">Reuse</button>
+
+                <button onclick="reuseTransaction(this)"
+                    style="margin-top:12px; padding:9px 14px; background:#1e90ff; color:white; 
+                           border:none; border-radius:8px; cursor:pointer; font-size:14px;">
+                    📌 Reuse
+                </button>
             </div>
 
-            <div class="transaction" data-type="data" style="background-color:white; padding:20px; border-radius:15px; box-shadow:0 2px 5px rgba(0,0,0,0.1);">
-                <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
-                    <span style="font-weight:bold; color:#333;">1GB Data Purchase</span>
-                    <span style="color:green; font-weight:bold;">₦1,000</span>
+            <!-- DATA PURCHASE -->
+            <div class="transaction" data-type="data"
+                style="background:white; padding:18px; border-radius:15px; 
+                       box-shadow:0 3px 8px rgba(0,0,0,0.12);">
+                
+                <div style="display:flex; justify-content:space-between;">
+                    <span style="font-weight:bold;">🌐 1GB Data Purchase</span>
+                    <span style="font-weight:bold; color:#108b35;">₦1,000</span>
                 </div>
-                <div style="display:flex; justify-content:space-between; color:gray; font-size:14px;">
+
+                <div style="color:gray; font-size:14px; margin-top:6px; display:flex; justify-content:space-between;">
                     <span>08098765432</span>
-                    <span>2025-12-08 21:50</span>
+                    <span>2025-12-08 • 21:50</span>
                 </div>
-                <button onclick="reuseTransaction(this)" style="margin-top:10px; padding:8px 12px; background-color:#1e90ff; color:white; border:none; border-radius:8px; cursor:pointer;">Reuse</button>
+
+                <button onclick="reuseTransaction(this)"
+                    style="margin-top:12px; padding:9px 14px; background:#1e90ff; color:white; 
+                           border:none; border-radius:8px; cursor:pointer; font-size:14px;">
+                    🔄 Reuse
+                </button>
             </div>
 
-            <!-- Add more transactions here to make it long -->
-            <!-- Example: 10+ more repeated cards -->
         </div>
     </main>
 
-    <!-- Bottom Navigation -->
-    <nav style="position:fixed; bottom:0; width:100%; background-color:white; display:flex; justify-content:space-around; padding:10px 0; box-shadow:0 -2px 5px rgba(0,0,0,0.1);">
-        <a href="index.html" style="text-decoration:none; color:#1e90ff;">Home</a>
-        <a href="finance.html" style="text-decoration:none; color:#1e90ff;">Finance</a>
-        <a href="reward.html" style="text-decoration:none; color:#1e90ff;">Rewards</a>
-        <a href="me.html" style="text-decoration:none; color:#1e90ff;">Me</a>
+    <!-- BOTTOM NAV -->
+    <nav style="position:fixed; bottom:0; width:100%; background:white; 
+                display:flex; justify-content:space-around; padding:10px 0; 
+                border-top:1px solid #ddd;">
+        <a href="index.html" style="text-decoration:none; color:#1e90ff;">🏠 Home</a>
+        <a href="finance.html" style="text-decoration:none; color:#1e90ff;">💼 Finance</a>
+        <a href="reward.html" style="text-decoration:none; color:#1e90ff;">🎁 Rewards</a>
+        <a href="me.html" style="text-decoration:none; color:#1e90ff;">👤 Me</a>
     </nav>
 
     <script>
         function filterHistory() {
-            const filter = document.getElementById('filter').value;
-            const transactions = document.querySelectorAll('.transaction');
+            const filter = document.getElementById("filter").value;
+            const transactions = document.querySelectorAll(".transaction");
 
             transactions.forEach(tx => {
-                if(filter === 'all' || tx.getAttribute('data-type') === filter) {
-                    tx.style.display = 'flex';
-                    tx.style.flexDirection = 'column';
+                if (filter === "all" || tx.getAttribute("data-type") === filter) {
+                    tx.style.display = "block";
                 } else {
-                    tx.style.display = 'none';
+                    tx.style.display = "none";
                 }
             });
         }
 
         function reuseTransaction(btn) {
-            alert('Transaction details copied! You can now reuse this transaction.');
+            alert("Transaction details copied! Ready to reuse.");
         }
     </script>
 
